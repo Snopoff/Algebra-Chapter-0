@@ -387,24 +387,25 @@ analogous to Proposition 2.3, for epimorphisms and surjections.
 \end{problem}
 
 \begin{solution}
-A function $f:A\to B$ is an \textit{epimorphism} if and only if for all sets $Z$
-and all functions $b':Z\to B$, there is a function $a':Z\to A$ such that $f\circ
-a' = b'$. Now we will show that $f$ is a surjection if and only if it is an
-epimorphism.
+A function $f:A\to B$ is an \textit{epimorphism} iff for all sets $Z$
+and all functions $\beta{'}, \beta{''}:Z\to B$, this holds:
+\[ \beta{'} \circ f = \beta{''} \circ f \implies \beta{'} = \beta{''} \]
 
-($\implies$) Suppose that $f:A\to B$ is surjective. Let $Z$ be a set and
-$b':Z\to B$ a function. We need to construct a function $a':Z\to A$ such that
-$f\circ a' = b'$. Fix $z\in Z$. Suppose $b=b'(z)\in B$. Since $b\in B$ and $f$
-is surjective, there exists an $a\in A$ such $f(a) = b$. Now, define $a'(z) =
-a$ this way for each $z\in Z$. Then $f\circ a'(z) = b'(z)$ for all $z\in Z$, so
-$f\circ a' = b'$. Hence $f$ is an epimorphism.
+Now we will show that $f$ is a surjection iff it is an epimorphism.
 
-($\impliedby$) Suppose that $f$ is an epimorphism. Let $b':B\to B$ be a
-bijection. Since $f$ is an epimophism, there is a function $a':B\to A$ such that
-$f\circ a' = b'$. Let $b\in B$. Since $b'$ is a bijection, there is a unique
-element $y\in B$ such that $b'(y) = b$. Furthermore, we have that $(f\circ
-a')(y) = b$. In other words, $a = a'(y)$ is an element in $a$ such that $f(a) =
-b$. Hence $f$ is surjective, as required.
+($\implies$) $f: A\to B$ is a surjection, by Proposition 2.1.2 $f$ has a right-inverse. 
+Let $g: B\to A$ be a right-invese for $f$. Then suppose $ \beta{'}, \beta{''} : B\to Z $
+for all sets $Z$ such that $\beta{'} \circ f = \beta{''} \circ f$. Then:
+\[ \beta{'} \circ f = \beta{''} \circ f \iff \beta{'} \circ f \circ g = \beta{''} \circ f \circ g 
+\iff \beta{'} = \beta{''} \]
+So $f$ is an epimophism.
+
+($\impliedby$) 
+Suppose $f$ is not a surjection. Then ($\exists b^* \in B$) ($\forall a \in A$) $ b^* \neq f(a) $. Since $f$ is an epimorphism,
+for all sets $Z$ and for all $\beta{'}, \beta{''}: B\to Z$:
+\[ \beta{'} \circ f = \beta{''} \circ f \implies \beta{'} = \beta{''} \]
+But this can't be true, because $b^* \notin im f$, so even if $\beta{'} \circ f = \beta{''} \circ f$ 
+it doesn't imply that $\beta{'}(b^*) = \beta{''}(b^*)$.
 \end{solution}
 
 
