@@ -1243,40 +1243,46 @@ They are not unique; any singleton pointed set is initial and final.
 
 % Problem 5.5
 \begin{problem}
-Consider the category corresponding to endowing (as in Example 3.3) the set
-$\mathbf{Z}^+$ of positive integers with the divisibility relation. Thus there
-is exactly one morphism $d\to m$ in this category if and only if $d$ divides $m$
-without remainder; there is no morphism between $d$ and $m$ otherwise. Show that
-this category has products and coproducts. What are their `conventional' names?
-[\S VII.5.1]
-\end{problem}
-\begin{solution}
-\def \Div {\mathsf{Div}}
-Let $\Div$ be the above category. Let $m,n\in\Obj(\Div)$. We claim that
-$\gcd(m,n)$ corresponds to a final object (namely $(\gcd(m,n),m,n)$) in
-$\Div_{m,n}$. Note that for any $z\in\Obj(\Div)$ such that $z\mid m$ and $z\mid
-n$, $z\mid\gcd(m,n)$ (by definition of $\gcd$;) hence
-$\Hom_{\Div_{m,n}}((z,m,n),(\gcd(m,n),m,n))$ is non-empty. Furthermore, since
-there can only be at most 1 morphism between any two objects in $\Div$,
-$(\gcd(m,n),m,n)$ is final. The conventional name for this is the `greatest
-common divisor.'
-
-The coproducts in $\Div$ are the `least common multiple'. For any
-$z\in\mathbf{Z}^+$, if $m\mid z$ and $n\mid z$, then $\lcm(n,m)\mid z$. Hence
-$((\lcm(m,n),m,n),(z,m,n))$ is the unique morphism from $(\lcm(m,n),m,n)$ in
-$\Div^{m,n}$, so $(\lcm(m,n),m,n)$ is initial.
-\end{solution}
-
-
-% Problem 5.5
-\begin{problem}
 What are the final objects in the category considered in \S5.3? [\S5.3]
 \end{problem}
 \begin{solution}
+Consider coslice category $A/\mathsf{Set}$. There was shown in \S 5.3 that $A/\sim$ is 
+initial object in this category. We know that in $\mathsf{Set}$ final objects are singletons.
+Easy to see, that a pair $(const, \{*\})$ is final object in this coslice category. Indeed, 
+for any object in $\mathsf{Set}$ we can consider it with some constant map, which codomain is
+$\{*\}$. This map is obviously unique, so such pair is indeed the final object. Obviously, 
+such final object is not unique, but as has been proven all terminal objects are isomorphic.
 \end{solution}
 
 
 % Problem 5.6
+\begin{problem}
+  Consider the category corresponding to endowing (as in Example 3.3) the set
+  $\mathbf{Z}^+$ of positive integers with the divisibility relation. Thus there
+  is exactly one morphism $d\to m$ in this category if and only if $d$ divides $m$
+  without remainder; there is no morphism between $d$ and $m$ otherwise. Show that
+  this category has products and coproducts. What are their `conventional' names?
+  [\S VII.5.1]
+  \end{problem}
+  \begin{solution}
+  \def \Div {\mathsf{Div}}
+  Let $\Div$ be the above category. Let $m,n\in\Obj(\Div)$. We claim that
+  $\gcd(m,n)$ corresponds to a final object (namely $(\gcd(m,n),m,n)$) in
+  $\Div_{m,n}$. Note that for any $z\in\Obj(\Div)$ such that $z\mid m$ and $z\mid
+  n$, $z\mid\gcd(m,n)$ (by definition of $\gcd$;) hence
+  $\Hom_{\Div_{m,n}}((z,m,n),(\gcd(m,n),m,n))$ is non-empty. Furthermore, since
+  there can only be at most 1 morphism between any two objects in $\Div$,
+  $(\gcd(m,n),m,n)$ is final. The conventional name for this is the `greatest
+  common divisor.'
+  
+  The coproducts in $\Div$ are the `least common multiple'. For any
+  $z\in\mathbf{Z}^+$, if $m\mid z$ and $n\mid z$, then $\lcm(n,m)\mid z$. Hence
+  $((\lcm(m,n),m,n),(z,m,n))$ is the unique morphism from $(\lcm(m,n),m,n)$ in
+  $\Div^{m,n}$, so $(\lcm(m,n),m,n)$ is initial.
+  \end{solution}
+
+
+% Problem 5.7
 \begin{problem}
 Redo Exercise 2.9, this time using Proposition 5.4.
 \end{problem}
@@ -1305,7 +1311,7 @@ in some auxiliary category of $\Set$, they are isomorphic, as required.
 \end{solution}
 
 
-% Problem 5.7
+% Problem 5.8
 \begin{problem}
 \def \C {\mathsf{C}}
 Show that in every category $\C$ the products $A\times B$ and $B\times A$ are
@@ -1328,7 +1334,7 @@ Hence, by Proposition 5.4, $A\times B$ and $B\times A$ are isomorphic.
 \end{solution}
 
 
-% Problem 5.8
+% Problem 5.9
 \begin{problem}
 \def \C {\mathsf{C}}
 Let $\C$ be a category with products. Find a reasonable candidate for the
