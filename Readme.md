@@ -15,4 +15,4 @@ The text is available for free online. It should also be at your college
 library.
 
 
-This repo is a fork of @srcreigh same repo. I continue his work and about to add solutions to new chapters. I also replace some of the solutions of problems in 1st and 2nd chapters with mine ones. (e.g. problem 2.5. in Chapter 1)
+This repo is a fork of @srcreigh same repo. I continue his work and about to add solutions to new chapters. I also replace some of the solutions of problems in 1st and 2nd chapters with mine ones. (e.g. problem 2.5. in Chapter 1).
